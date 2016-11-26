@@ -63,6 +63,10 @@ module.exports = {
         loader: 'json'
       },
       {
+        test: /\.(scss|sass)$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
@@ -78,7 +82,10 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
-    ]
+    ],
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, './node_modules/foundation-sites/scss')]
+    }
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
