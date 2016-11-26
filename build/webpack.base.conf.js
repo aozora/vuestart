@@ -63,8 +63,8 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(scss|sass)$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.scss$/,
+        loader: 'style!css!postcss!sass?sourceMap'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

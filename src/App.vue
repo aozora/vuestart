@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="---app">
     <img src="./assets/logo.png">
     <hello></hello>
   </div>
@@ -7,10 +7,13 @@
 
 <script>
 import Hello from './components/Hello';
+import Header from './components/Header';
+import './assets/scss/app.scss';
 
 export default {
   name: 'app',
   components: {
+    Header,
     Hello,
   },
 };
