@@ -28,14 +28,14 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: path.resolve(__dirname, '../src'),
-        exclude: /node_modules/
-      }
-    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.js$/,
+    //     loader: 'eslint',
+    //     include: path.resolve(__dirname, '../src'),
+    //     exclude: /node_modules/
+    //   }
+    // ],
 
     loaders: [
       {
@@ -77,9 +77,9 @@ module.exports = {
     plugins: ['transform-runtime']
   },
 
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
+  // eslint: {
+  //   formatter: require('eslint-friendly-formatter')
+  // },
 
   postcss: function() {
     return [autoprefixer];

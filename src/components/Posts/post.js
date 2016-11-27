@@ -1,8 +1,7 @@
+/* eslint-disable space-before-blocks, no-console */
 import Vue from 'vue';
-
-import {postsResource} from 'src/helpers/resources';
-import {LoadingState} from 'src/main';
-
+import { postsResource } from 'src/helpers/resources';
+import { LoadingState } from 'src/main';
 import template from './post.html';
 
 export default Vue.extend({
@@ -10,16 +9,16 @@ export default Vue.extend({
 
   data() {
     return {
-      post: {},
+      post: {}
     };
   },
 
-  created(){
+  created() {
     this.fetchPost();
   },
 
   methods: {
-    fetchPost () {
+    fetchPost() {
       const id = this.$route.params.id;
       LoadingState.$emit('toggle', true);
       return postsResource.get({ id }).then((response) => {

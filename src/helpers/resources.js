@@ -7,7 +7,7 @@ const API_BASE = 'http://jsonplaceholder.typicode.com';
 Vue.use(VueResource);
 
 Vue.http.options = {
-  root: API_BASE,
+  root: API_BASE
 };
 
 Vue.http.interceptors.push((request, next) => {
