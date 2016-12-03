@@ -16,7 +16,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.html'],
+    extensions: ['', '.js', '.vue', '.html', '.json'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'src': path.resolve(__dirname, '../src'),
@@ -39,6 +39,10 @@ module.exports = {
 
     loaders: [
       {
+        test: /\.vue$/,
+        loader: 'vue'
+      },
+      {
         test: /\.html$/,
         loader: 'vue-html'
       },
@@ -50,8 +54,8 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|jpeg|gif)$/,
-        loader: 'url?prefix=img/&limit=5000'
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        loader: 'url?limit=5000'
       },
 
       {
@@ -60,7 +64,7 @@ module.exports = {
       },
 
       {
-        test: /\.(ttf|eot|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        test: /\.(ttf|eot|woff)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file'
       },
 
@@ -81,7 +85,11 @@ module.exports = {
   //   formatter: require('eslint-friendly-formatter')
   // },
 
-  postcss: function() {
+  postcss: function () {
     return [autoprefixer];
+  },
+
+  externals: {
+    foundation: 'Foundation'
   }
 };

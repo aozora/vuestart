@@ -1,39 +1,45 @@
 import Vue from 'vue';
-import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
-import Navigation from 'components/Navigation/navigation';
-import Loader from 'components/Loader/Loader';
-
-Vue.use(VueRouter);
-Vue.use(VueResource);
-
+import App from 'components/App';
 import routes from 'src/routes';
+import store from 'src/store';
+
+
+// import static assets
 import 'src/assets/scss/app.scss';
 
-export const LoadingState = new Vue();
+// import 'script!jquery';
+// import 'script!what-input';
+// import 'script!promise-polyfill';
+// import 'script!whatwg-fetch';
+// import 'script!foundation-sites';
+// import 'script!lodash';
+
+// Vue use
+Vue.use(VueRouter);
+
 
 export const router = new VueRouter({
   routes,
   mode: 'history',
-  linkActiveClass: 'active'
+  linkActiveClass: 'active',
+  scrollBehavior (to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 });
 
-export const App = new Vue({
+
+export const app = new Vue({
+  template: '<App/>',
   router,
   components: {
-    Navigation,
-    Loader
+    App
   },
 
-  data(){
-    return {
-      isLoading: false
-    };
-  },
-
-  created(){
-    LoadingState.$on('toggle', (isLoading) => {
-      this.isLoading = isLoading;
-    });
-  }
+  // provide the store using the "store" option.
+  // this will inject the store instance to all child components.
+  store,
 }).$mount('#app');

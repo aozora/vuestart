@@ -1,7 +1,14 @@
-import Home from 'components/Home/home';
-import Posts from 'components/Posts/posts';
-import Post from 'components/Posts/post';
-import NotFound from 'components/NotFound/notFound';
+import Home from 'components/Home/Home';
+import AutoCatalog from 'components/AutoCatalog/AutoCatalog';
+import AddToCatalog from 'components/AutoCatalog/AddToCatalog';
+import EnableMe from 'components/EnableMe';
+import ThankYou from 'components/ThankYou';
+
+import ResultsEpson from 'components/FakePages/ResultsEpson';
+import ResultsEan from 'components/FakePages/ResultsEan';
+import BandoAutomobile from 'components/FakePages/BandoAutomobile';
+
+import NotFound from 'components/NotFound/NotFound';
 
 const routes = [
   {
@@ -9,14 +16,34 @@ const routes = [
     component: Home
   },
   {
-    path: '/posts',
-    component: Posts
+    path: '/autocatalog',
+    component: AutoCatalog
   },
   {
-    path: '/post/:id',
-    name: 'post',
-    component: Post
+    path: '/addtocatalog',
+    component: AddToCatalog
   },
+  {
+    path: '/abilitati',
+    component: EnableMe
+  },
+  {
+    path: '/thankyou',
+    component: ThankYou
+  },
+  {
+    path: '/stampanti',
+    component: ResultsEpson
+  },
+  {
+    path: '/ean',
+    component: ResultsEan
+  },
+  {
+    path: '/automobile',
+    component: BandoAutomobile
+  },
+
   {
     path: '*',
     component: NotFound

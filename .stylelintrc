@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "number-leading-zero": null,
+    "declaration-colon-newline-after": null,
+    "at-rule-empty-line-before": null,
+    "declaration-empty-line-before": null
+    }
+}
