@@ -3,9 +3,7 @@
     <TopNav></TopNav>
     <MainMenu></MainMenu>
 
-    <transition name="loader">
-      <loader v-show="loading"></loader>
-    </transition>
+    <loader v-show="loading"></loader>
 
     <transition name="page-fade" mode="out-in">
       <router-view></router-view>
@@ -23,7 +21,6 @@
 
   export default {
     name: 'Home',
-    props: ['message'],
     components: {
       TopNav,
       Loader,

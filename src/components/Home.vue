@@ -2,44 +2,30 @@
   <div class="home">
     <Search></Search>
 
-    <transition name="slideUp"
-                leave-class="slideDown"
-                leave-active-class="slideDown-leave-active">
-      <NoResults v-show="!loading && noresults"></NoResults>
-    </transition>
+    <NoResults v-show="!loading && noresults"></NoResults>
 
-    <transition name="slideUp"
-                leave-class="slideDown"
-                leave-active-class="slideDown-leave-active">
-      <SearchResults v-if="!loading && !noresults"></SearchResults>
-    </transition>
+    <SearchResults v-if="!loading && !noresults"></SearchResults>
 
   </div>
 </template>
 
 <script>
   import Vue from 'vue';
-  import Search from 'components/Home/Search';
-  import SearchResults from 'components/SearchResults/SearchResults';
-  import NoResults from 'components/SearchResults/NoResults';
+  import Search from 'components/Search/Search';
+  import SearchResults from 'components/Search/SearchResults';
+  import NoResults from 'components/Search/NoResults';
 
   export default {
     name: 'Home',
     components: {
-      Hero,
       Search,
       SearchResults,
-      NoResults,
-      FakeNews,
-      LoginModal
+      NoResults
     },
     computed: {
       loading: function () {
         return this.$store.state.isLoading;
       }
-//      noresults: function () {
-//        return this.$store.state.noresults;
-//      }
     }
   };
 </script>

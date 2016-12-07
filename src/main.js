@@ -10,8 +10,8 @@ import 'src/assets/scss/app.scss';
 
 // import 'script!jquery';
 // import 'script!what-input';
-// import 'script!promise-polyfill';
-// import 'script!whatwg-fetch';
+import 'script!promise-polyfill';
+import 'script!whatwg-fetch';
 // import 'script!foundation-sites';
 // import 'script!lodash';
 
