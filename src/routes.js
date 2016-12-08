@@ -1,5 +1,5 @@
-import Home from 'components/Home/Home';
-import NotFound from 'components/NotFound/NotFound';
+import Home from 'components/Home';
+import NotFound from 'components/NotFound';
 
 const routes = [
   {

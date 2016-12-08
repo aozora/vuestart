@@ -15,8 +15,9 @@
 
     <div class="meta-search-results__where">
       <div class="column row">
-        <div class="tool" v-for="tool in results.where.tools">
-          <CardLarge v-bind:tool="tool"></CardLarge>
+        <div class="tool" v-for="tool in results">
+          <!--CardLarge v-bind:tool="tool"></CardLarge-->
+          <p></p>
         </div>
 
       </div>

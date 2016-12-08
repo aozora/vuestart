@@ -25,6 +25,9 @@
     computed: {
       loading: function () {
         return this.$store.state.isLoading;
+      },
+      noresult: function () {
+        return this.$store.state.results.length === 0;
       }
     }
   };

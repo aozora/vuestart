@@ -11,16 +11,12 @@ const store = new Vuex.Store({
   state: {
     isLoading: false,
     query: '',
-    results: {},
-    noresults: false,
+    results: {}
   },
 
   mutations: {
     SET_IS_LOADING: (state, loading) => {
       state.isLoading = loading;
-    },
-    SET_NORESULTS: (state, noresults) => {
-      state.noresults = noresults;
     },
     SET_SEARCH_QUERY: (state, query) => {
       state.query = query;
@@ -36,7 +32,6 @@ const store = new Vuex.Store({
       // console.log(`action FETCH_RESULTS: query = ${query}`);
 
       commit('SET_SEARCH_QUERY', query);
-      commit('SET_SEARCH_IS_ACTIVE', true);
       commit('SET_IS_LOADING', true);
 
       if (query) {
@@ -53,9 +48,9 @@ const store = new Vuex.Store({
           commit('SET_SEARCH_RESULTS', result);
           commit('SET_IS_LOADING', false);
 
-          if (result === '') {
-            commit('SET_NORESULTS', true);
-          }
+          // if (result === '') {
+          //   commit('SET_NORESULTS', true);
+          // }
         });
       } else {
         commit('SET_IS_LOADING', false);
