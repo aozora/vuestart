@@ -3,7 +3,7 @@
 //@import './foundation-sites/foundation';
 //@import './motion-ui/motion-ui';
 @import 'foundation';
-@import 'motion-ui';
+//@import 'motion-ui';
 
 $global-flexbox: true !global;
 
@@ -46,9 +46,9 @@ $global-flexbox: true !global;
 
 @include foundation-flex-classes;
 
-// Motion UI
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//// Motion UI
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 
 
