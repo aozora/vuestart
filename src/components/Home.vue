@@ -10,7 +10,6 @@
 </template>
 
 <script>
-  import Vue from 'vue';
   import Search from 'components/Search/Search';
   import SearchResults from 'components/Search/SearchResults';
   import NoResults from 'components/Search/NoResults';
@@ -26,8 +25,8 @@
       loading: function () {
         return this.$store.state.isLoading;
       },
-      noresult: function () {
-        return this.$store.state.results.length === 0;
+      noresults: function () {
+        return Object.keys(this.$store.state.results).length === 0;
       }
     }
   };
