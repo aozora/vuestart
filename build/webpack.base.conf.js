@@ -92,5 +92,5 @@ module.exports = {
       })
     ]
   },
-  plugins: [new BundleAnalyzerPlugin()]
+  // plugins: [new BundleAnalyzerPlugin()]
 }

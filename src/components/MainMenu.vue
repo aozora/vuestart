@@ -4,10 +4,10 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text">
-            <a href="/">
+            <router-link to="/">
               <img src="~assets/img/logo.png" alt="logo"/>
               VueJs Prototype
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -15,8 +15,7 @@
       <div class="top-bar-right">
         <ul class="menu">
           <li>
-            <router-link tag="a" to="/about"></router-link>
-            <a href="#">About</a>
+            <router-link to="/about">About</router-link>
           </li>
         </ul>
       </div>

@@ -5,7 +5,7 @@ import json from 'json-loader!../assets/mock-data/products.json';
 
 Vue.use(Vuex);
 
-const delay = 200;
+const delay = 2500;
 
 const store = new Vuex.Store({
   state: {

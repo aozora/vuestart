@@ -4,6 +4,10 @@ import App from 'components/App';
 import routes from 'src/routes';
 import store from 'src/store';
 
+// Vue config
+Vue.config.devtools = true;
+Vue.config.silent = false;
+
 
 // import static assets
 // import './assets/scss/app.scss';
