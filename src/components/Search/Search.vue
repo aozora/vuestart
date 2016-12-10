@@ -1,46 +1,40 @@
 <template>
-  <section class="search">
-      <div class="row align-center">
-        <div class="small-8 column">
-          <form class="search__form" v-on:submit.prevent="submit">
-          <input type="text" id="search-input" name="search" v-model="query"/>
-          <button class="button" type="submit">
-            <span>Search</span>
-          </button>
-          </form>
-        </div>
-      </div>
-  </section>
+  <div class="home">
+    <SearchBox></SearchBox>
+
+    <NoResults v-show="!loading && noresults"></NoResults>
+
+    <SearchResults v-if="!loading && !noresults"></SearchResults>
+
+  </div>
 </template>
 
 <script>
+  import SearchBox from 'components/Search/SearchBox';
+  import SearchResults from 'components/Search/SearchResults';
+  import NoResults from 'components/Search/NoResults';
+
   export default {
     name: 'Search',
 
-    data () {
-      return {
-        query: this.$store.state.query
-      }
+    components: {
+      SearchBox,
+      SearchResults,
+      NoResults
     },
 
     computed: {
-      searched: function () {
-        return this.$store.state.searchIsActive;
+      loading: function () {
+        return this.$store.state.isLoading;
+      },
+      noresults: function () {
+        return Object.keys(this.$store.state.results).length === 0;
       }
     },
 
-    methods: {
-      submit: function (event) {
-        event.preventDefault();
-        const query = document.getElementById('search-input').value;
-
-        if (!query || query === '') {
-          return false;
-        }
-
-        // dispatch an action with a payload
-        this.$store.dispatch('FETCH_RESULTS', query);
-      }
+    created () {
+      // dispatch an action with a payload
+      this.$store.dispatch('FETCH_RESULTS', this.$route.params.query);
     }
   };
 </script>

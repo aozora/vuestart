@@ -29,7 +29,7 @@ const store = new Vuex.Store({
   actions: {
     FETCH_RESULTS: ({ commit, state }, query) => {
 
-      // console.log(`action FETCH_RESULTS: query = ${query}`);
+      console.log(`action FETCH_RESULTS: query = ${query}`);
 
       commit('SET_SEARCH_QUERY', query);
       commit('SET_IS_LOADING', true);
@@ -38,13 +38,13 @@ const store = new Vuex.Store({
 
         const p = new Promise(function (resolve, reject) {
           setTimeout(() => {
-            // console.log('Fetch OK!');
+            console.log('Fetch OK!');
             return resolve(json);
           }, delay)
         });
 
         return p.then(function (result) {
-          // console.log('Fetch Promise OK! mutating state...');
+          console.log('Fetch Promise OK! mutating state...');
           commit('SET_SEARCH_RESULTS', result);
           commit('SET_IS_LOADING', false);
 

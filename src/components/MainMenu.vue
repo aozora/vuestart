@@ -14,9 +14,9 @@
 
       <div class="top-bar-right">
         <ul class="menu">
-          <li>
-            <router-link to="/about">About</router-link>
-          </li>
+          <router-link tag="li" to="/about">
+            <a>About</a>
+          </router-link>
         </ul>
       </div>
     </div>
