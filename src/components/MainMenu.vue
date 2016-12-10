@@ -3,10 +3,10 @@
     <div class="column row">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text">Site Title</li>
-          <li>
+          <li class="menu-text">
             <a href="/">
               <img src="~assets/img/logo.png" alt="logo"/>
+              VueJs Prototype
             </a>
           </li>
         </ul>

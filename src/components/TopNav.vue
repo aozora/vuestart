@@ -1,9 +1,8 @@
 <template>
-  <nav class="top-bar primary">
+  <nav class="top-bar top-nav">
     <div class="column row">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text">Prototype</li>
           <li>
             <a href="#">Link</a>
           </li>

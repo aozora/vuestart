@@ -3720,3 +3720,40 @@ html.is-reveal-open body {
     transform: rotate(360deg);
   }
 }
+
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity .7s;
+}
+
+.page-fade-enter,
+.page-fade-leave-active {
+  opacity: 0;
+}
+
+.top-nav,
+.top-nav ul {
+  background-color: #fefefe;
+}
+
+.main-menu .menu-text img {
+  max-height: 1.5rem;
+}
+
+.main-menu .menu > li.menu-text > a {
+  padding: 0;
+  line-height: 1.5rem;
+}
+
+.search {
+  padding: 2rem;
+}
+
+.search input,
+.search button {
+  display: inline-block;
+}
+
+.search__form {
+  display: flex;
+}

@@ -1,0 +1,9 @@
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity .7s;
+}
+
+.page-fade-enter,
+.page-fade-leave-active {
+  opacity: 0;
+}
