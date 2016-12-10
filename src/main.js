@@ -6,7 +6,8 @@ import store from 'src/store';
 
 
 // import static assets
-import 'src/assets/scss/app.scss';
+// import './assets/scss/app.scss';
+import './assets/css/app.css';
 
 // import 'script!jquery';
 // import 'script!what-input';

@@ -1,7 +1,9 @@
 @charset 'utf-8';
-@import 'settings';
-@import '~foundation-sites/scss/foundation';
-@import '~motion-ui/motion-ui';
+@import './settings';
+//@import './foundation-sites/foundation';
+//@import './motion-ui/motion-ui';
+@import 'foundation';
+@import 'motion-ui';
 
 $global-flexbox: true !global;
 
@@ -48,8 +50,10 @@ $global-flexbox: true !global;
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+
+
 // Application Components
-@import '00-loader';
+@import './00-loader';
 
 
 
