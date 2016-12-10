@@ -2,6 +2,10 @@
 
 > Starter project using Vue.js v2 and WebPack
 
+Webpack for .vue, js bundling.
+scss managed with node-sass
+img as static resources (webpack url-loader)
+
 ## Build Setup
 
 ``` bash
