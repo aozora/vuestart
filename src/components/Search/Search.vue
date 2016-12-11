@@ -32,9 +32,27 @@
       }
     },
 
+    methods: {
+      fetchResults () {
+        this.$store.dispatch('FETCH_RESULTS', this.$route.query.q);
+      }
+    },
+
+    /**
+     * Watch for route change to invoke again the fetchResults() method,
+     * since the component hook doesn't get hit (it get reused).
+     */
+    watch: {
+      '$route' (to, from) {
+        // react to route changes...
+        this.fetchResults();
+      }
+    },
+
     created () {
       // dispatch an action with a payload
-      this.$store.dispatch('FETCH_RESULTS', this.$route.params.query);
+      console.log(`Search.created(): this.$route.query.q = ${this.$route.query.q}`);
+      this.fetchResults();
     }
   };
 </script>

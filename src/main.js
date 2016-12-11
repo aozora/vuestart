@@ -13,12 +13,8 @@ Vue.config.silent = false;
 // import './assets/scss/app.scss';
 import './assets/css/app.css';
 
-// import 'script!jquery';
-// import 'script!what-input';
 import 'script!promise-polyfill';
 import 'script!whatwg-fetch';
-// import 'script!foundation-sites';
-// import 'script!lodash';
 
 // Vue use
 Vue.use(VueRouter);
@@ -27,13 +23,7 @@ Vue.use(VueRouter);
 export const router = new VueRouter({
   routes,
   mode: 'history',
-  linkActiveClass: 'active',
-  scrollBehavior (to, from, savedPosition) {
-    return {
-      x: 0,
-      y: 0
-    }
-  }
+  linkActiveClass: 'active'
 });
 
 

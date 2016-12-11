@@ -35,8 +35,8 @@
 
         // go to the search results route
         const router = this.$router;
-        router.push('/search');
-        //        router.push({ path: '/search', params: { query: query }});
+        router.push({ path: 'search', query: { q: query } });
+//        router.push({ path: 'search', params: { q: query } });
       }
     }
   };
