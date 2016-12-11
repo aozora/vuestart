@@ -3,7 +3,7 @@
     <div class="image">
       <img src="~assets/img/logo.png" alt="logo"/>
     </div>
-    <h2>No results found!</h2>
+    <h2>Sorry, no results found!</h2>
     </div>
   </section>
 </template>

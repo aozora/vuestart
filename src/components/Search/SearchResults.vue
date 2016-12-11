@@ -1,37 +1,26 @@
 <template>
-  <section class="meta-search-results">
-
-    <div class="column row">
-      <div class="meta-search-results__what">
-        <div class="row">
-          <div class="medium-8 column">
-            <h1>
-              Found <span class="query">{{results.query}}</span>
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="meta-search-results__where">
-      <div class="column row">
-        <div class="tool" v-for="tool in results">
-          <!--CardLarge v-bind:tool="tool"></CardLarge-->
-          <p></p>
-        </div>
-
+  <section class="search-results">
+    <div class="ow medium-up-3">
+      <div class="column" v-for="result in results">
+        <Card v-bind:result="result"></Card>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+  import Card from 'components/Search/Card';
+
   export default {
     name: 'SearchResults',
 
+    components: {
+      Card
+    },
+
     computed: {
       results: function () {
-        return this.$store.state.results;
+        return this.$store.state.results.results;
       }
     },
 

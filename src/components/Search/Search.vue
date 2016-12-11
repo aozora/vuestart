@@ -2,6 +2,8 @@
   <div class="home">
     <SearchBox></SearchBox>
 
+    <loader v-show="loading"></loader>
+
     <NoResults v-show="!loading && noresults"></NoResults>
 
     <SearchResults v-if="!loading && !noresults"></SearchResults>
@@ -13,6 +15,7 @@
   import SearchBox from 'components/Search/SearchBox';
   import SearchResults from 'components/Search/SearchResults';
   import NoResults from 'components/Search/NoResults';
+  import Loader from 'components/Loader';
 
   export default {
     name: 'Search',
@@ -20,6 +23,7 @@
     components: {
       SearchBox,
       SearchResults,
+      Loader,
       NoResults
     },
 
@@ -28,7 +32,7 @@
         return this.$store.state.isLoading;
       },
       noresults: function () {
-        return Object.keys(this.$store.state.results).length === 0;
+        return Object.keys(this.$store.state.results).length === 0 || this.$store.state.results.results.length === 0;
       }
     },
 
