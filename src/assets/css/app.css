@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * Foundation for Sites by ZURB
- * Version 6.3.0-rc2
+ * Version 6.3.0-rc3
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -3193,6 +3193,16 @@ html.is-reveal-open body {
 .main-menu .menu > li.menu-text > a {
   padding: 0;
   line-height: 1.5rem;
+}
+
+.footer {
+  padding: 2rem 0;
+  background-color: #0a0a0a;
+  color: #fefefe;
+}
+
+.footer .menu > li > a {
+  color: #e6e6e6;
 }
 
 .search {
