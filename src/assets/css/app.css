@@ -3195,6 +3195,18 @@ html.is-reveal-open body {
   line-height: 1.5rem;
 }
 
+.hero {
+  background-color: #35495e;
+  height: 30vh;
+}
+
+.hero svg,
+.hero img {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 100%;
+}
+
 .footer {
   padding: 2rem 0;
   background-color: #0a0a0a;
