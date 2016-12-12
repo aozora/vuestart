@@ -11,9 +11,12 @@
 <script>
   export default {
     name: 'Card',
-    result: {
-      type: Object,
-      required: true
+
+    props: {
+      result: {
+        type: Object,
+        required: true
+      }
     }
   };
 </script>
