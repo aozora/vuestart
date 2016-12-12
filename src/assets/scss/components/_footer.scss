@@ -1,0 +1,9 @@
+.footer {
+  padding: 2rem 0;
+  background-color: $black;
+  color: $white;
+
+  .menu > li > a {
+    color: $light-gray;
+  }
+}
