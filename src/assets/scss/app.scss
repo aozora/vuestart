@@ -56,6 +56,7 @@ $global-flexbox: true !global;
 @import '00-loader';
 @import '01-transitions';
 
+@import 'components/app-container';
 @import 'components/top-nav';
 @import 'components/main-menu';
 @import 'components/hero';
