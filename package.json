@@ -61,7 +61,7 @@
     "json-loader": "^0.5.4",
     "opn": "^4.0.2",
     "postcss-loader": "^1.0.0",
-    "progress-bar-webpack-plugin": "^1.9.2",
+    "progress-bar-webpack-plugin": "^1.9.3",
     "shelljs": "^0.7.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
@@ -69,9 +69,9 @@
     "vue-loader": "^10.0.0",
     "vue-style-loader": "^1.0.0",
     "vue-template-compiler": "^2.1.8",
-    "webpack": "2.2.0-rc.3",
-    "webpack-dev-middleware": "1.9.0",
-    "webpack-hot-middleware": "2.15.0",
+    "webpack": "^2.2.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0",
     "webpack-merge": "^1.1.0"
   }
 }
