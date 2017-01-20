@@ -15,8 +15,8 @@
 </template>
 
 <script>
-  import Hero from 'components/Hero';
-  import SearchBox from 'components/Search/SearchBox';
+  import Hero from './Hero';
+  import SearchBox from './Search/SearchBox';
 
   export default {
     name: 'Home',

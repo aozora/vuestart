@@ -12,9 +12,9 @@
 </template>
 
 <script>
-  import MainMenu from 'components/MainMenu';
-  import TopNav from 'components/TopNav';
-  import MainFooter from 'components/MainFooter';
+  import MainMenu from './components/MainMenu';
+  import TopNav from './components/TopNav';
+  import MainFooter from './components/MainFooter';
 
   export default {
     name: 'Home',

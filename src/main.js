@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from 'components/App';
+import App from './App';
 import routes from 'src/routes';
 import store from 'src/store';
 
@@ -13,8 +13,8 @@ Vue.config.silent = false;
 // import './assets/scss/app.scss';
 import './assets/css/app.css';
 
-import 'script!promise-polyfill';
-import 'script!whatwg-fetch';
+import 'promise-polyfill';
+import 'whatwg-fetch';
 
 // Vue use
 Vue.use(VueRouter);

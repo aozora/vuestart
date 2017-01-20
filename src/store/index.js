@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 // import {fetchResults} from './api'
-import json from 'json-loader!../assets/mock-data/products.json';
+import json from '../assets/mock-data/products.json';
 
 Vue.use(Vuex);
 
