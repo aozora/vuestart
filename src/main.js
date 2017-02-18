@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import 'promise-polyfill';
+import 'whatwg-fetch';
 import App from './App';
-import routes from 'src/routes';
-import store from 'src/store';
+import router from './router';
+import store from './store';
 
 // Vue config
 Vue.config.devtools = true;
@@ -11,30 +13,18 @@ Vue.config.silent = false;
 
 // import static assets
 // import './assets/scss/app.scss';
-import './assets/css/app.css';
+// import './assets/css/app.css';
 
-import 'promise-polyfill';
-import 'whatwg-fetch';
-
-// Vue use
+// Vue plugins
 Vue.use(VueRouter);
 
 
-export const router = new VueRouter({
-  routes,
-  mode: 'history',
-  linkActiveClass: 'active'
-});
-
-
-export const app = new Vue({
-  template: '<App/>',
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
   router,
-  components: {
-    App
-  },
-
   // provide the store using the "store" option.
   // this will inject the store instance to all child components.
   store,
-}).$mount('#app');
+  render: h => h(App)
+});

@@ -28,16 +28,16 @@
     },
 
     computed: {
-      loading: function () {
+      loading() {
         return this.$store.state.isLoading;
       },
-      noresults: function () {
+      noresults() {
         return Object.keys(this.$store.state.results).length === 0 || this.$store.state.results.results.length === 0;
       }
     },
 
     methods: {
-      fetchResults () {
+      fetchResults() {
         this.$store.dispatch('FETCH_RESULTS', this.$route.query.q);
       }
     },
@@ -47,15 +47,16 @@
      * since the component hook doesn't get hit (it get reused).
      */
     watch: {
-      '$route' (to, from) {
+      /* eslint-disable object-shorthand */
+      '$route'(to, from) {
         // react to route changes...
         this.fetchResults();
       }
     },
 
-    created () {
+    created() {
       // dispatch an action with a payload
-      console.log(`Search.created(): this.$route.query.q = ${this.$route.query.q}`);
+//      console.log(`Search.created(): this.$route.query.q = ${this.$route.query.q}`);
       this.fetchResults();
     }
   };

@@ -16,35 +16,36 @@ const store = new Vuex.Store({
 
   mutations: {
     SET_IS_LOADING: (state, loading) => {
+      /* eslint-disable no-param-reassign */
       state.isLoading = loading;
     },
     SET_SEARCH_QUERY: (state, query) => {
+      /* eslint-disable no-param-reassign */
       state.query = query;
     },
     SET_SEARCH_RESULTS: (state, results) => {
+      /* eslint-disable no-param-reassign */
       state.results = results;
     }
   },
 
   actions: {
     FETCH_RESULTS: ({ commit, state }, query) => {
-
-      console.log(`action FETCH_RESULTS: query = ${query}`);
+      // console.log(`action FETCH_RESULTS: query = ${query}`);
 
       commit('SET_SEARCH_QUERY', query);
       commit('SET_IS_LOADING', true);
 
       if (query) {
-
-        const p = new Promise(function (resolve, reject) {
+        const p = new Promise((resolve, reject) => {
+          /* eslint-disable arrow-body-style   */
           setTimeout(() => {
-            console.log('Fetch OK!');
             return resolve(json);
-          }, delay)
+          }, delay);
         });
 
-        return p.then(function (result) {
-          console.log('Fetch Promise OK! mutating state...');
+        return p.then((result) => {
+          // console.log('Fetch Promise OK! mutating state...');
           commit('SET_SEARCH_RESULTS', result);
           commit('SET_IS_LOADING', false);
 
@@ -52,11 +53,11 @@ const store = new Vuex.Store({
           //   commit('SET_NORESULTS', true);
           // }
         });
-      } else {
-        commit('SET_IS_LOADING', false);
-        return Promise.reject();
       }
-    },
+
+      commit('SET_IS_LOADING', false);
+      return Promise.reject();
+    }
   }
 });
 

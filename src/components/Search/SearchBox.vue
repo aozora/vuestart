@@ -17,17 +17,18 @@
   export default {
     name: 'SearchBox',
 
-    data () {
+    data() {
       return {
+        /* eslint-disable semi */
         query: this.$store.state.query
       }
     },
 
     methods: {
-      submit: function (event) {
+      submit(event) {
         event.preventDefault();
         const query = document.getElementById('search__form-input').value;
-        console.log(`query = ${query}`);
+//        console.log(`query = ${query}`);
 
         if (!query || query === '') {
           return false;
@@ -36,7 +37,7 @@
         // go to the search results route
         const router = this.$router;
         router.push({ path: 'search', query: { q: query } });
-//        router.push({ path: 'search', params: { q: query } });
+        return true;
       }
     }
   };

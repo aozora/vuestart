@@ -19,7 +19,7 @@
     },
 
     computed: {
-      results: function () {
+      results() {
         return this.$store.state.results.results;
       }
     }
