@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
-    <TopNav></TopNav>
-    <MainMenu></MainMenu>
+    <top-nav></top-nav>
+    <main-menu></main-menu>
 
     <transition name="page-fade" mode="out-in">
       <router-view></router-view>
     </transition>
 
-    <MainFooter></MainFooter>
+    <main-footer></main-footer>
   </div>
 </template>
 

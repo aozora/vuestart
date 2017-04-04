@@ -1,6 +1,6 @@
 <template>
-  <nav class="top-bar top-nav">
-    <div class="column row">
+    <nav class="column row">
+      <div class="top-bar top-nav">
       <div class="top-bar-left">
         <ul class="menu">
           <li>
