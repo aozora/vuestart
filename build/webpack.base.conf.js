@@ -18,6 +18,13 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+
+  // resolve: {
+  //   extensions: ['.js', '.vue', '.json'],
+  //   alias: {
+  //     '@': resolve('src')
+  //   }
+  // },
   resolve: {
     extensions: ['.js', '.vue', '.json', 'scss'],
     modules: [
@@ -25,6 +32,7 @@ module.exports = {
       resolve('node_modules')
     ],
     alias: {
+      //'@': resolve('src'),
       'src': resolve('src'),
       'assets': resolve('src/assets'),
       'components': resolve('src/components')
@@ -35,7 +43,7 @@ module.exports = {
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
-        enforce: "pre",
+        enforce: 'pre',
         include: [resolve('src'), resolve('test')],
         options: {
           formatter: require('eslint-friendly-formatter')
@@ -51,14 +59,10 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
       },
-      // {
-      //   test: /\.s[a|c]ss$/,
-      //   loader: 'style!css!sass'
-      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
-        query: {
+        options: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
@@ -66,7 +70,7 @@ module.exports = {
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
-        query: {
+        options: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }

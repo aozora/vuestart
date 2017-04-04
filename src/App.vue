@@ -17,7 +17,7 @@
   import MainFooter from './components/MainFooter';
 
   export default {
-    name: 'Home',
+    name: 'app',
     components: {
       TopNav,
       MainMenu,
