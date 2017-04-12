@@ -1,24 +1,18 @@
 <template>
-    <nav class="column row">
-      <div class="top-bar top-nav">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-        </ul>
-      </div>
+  <nav class="top-nav nav">
+    <div class="nav-left">
+      <a href="#" class="nav-item">
+        Link
+      </a>
+      <a href="#" class="nav-item">
+        Link
+      </a>
+    </div>
 
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
-      </div>
+    <div class="nav-right">
+      <a href="#" class="nav-item">
+        Login
+      </a>
     </div>
   </nav>
 </template>

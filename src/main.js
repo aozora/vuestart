@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueBlu from 'vue-blu';
+
 import 'promise-polyfill';
 import 'whatwg-fetch';
 import App from './App';
@@ -18,6 +20,7 @@ Vue.config.silent = false;
 
 // Vue plugins
 Vue.use(VueRouter);
+Vue.use(VueBlu);
 
 
 /* eslint-disable no-new */
