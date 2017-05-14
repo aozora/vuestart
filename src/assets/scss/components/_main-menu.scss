@@ -1,12 +1,12 @@
 .main-menu {
-  background: $topbar-background;
+  background: $grey-lighter;
 
   .menu-text img {
     max-height: 1.5rem;
   }
 
-  .menu > li.menu-text > a {
-    padding: 0;
-    line-height: 1.5rem;
-  }
+  //.menu > li.menu-text > a {
+  //  padding: 0;
+  //  line-height: 1.5rem;
+  //}
 }
