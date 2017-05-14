@@ -1,9 +1,10 @@
 import VueRouter from 'vue-router';
 
-import Home from '../components/Home';
-import Search from '../components/Search/Search';
-import About from '../components/About';
-import NotFound from '../components/NotFound';
+import Home from '@/components/Home';
+import Search from '@/components/Search/Search';
+import About from '@/components/About';
+import Login from '@/components/Login';
+import NotFound from '@/components/NotFound';
 
 const routes = [
   {
@@ -17,6 +18,10 @@ const routes = [
   {
     path: '/about',
     component: About
+  },
+  {
+    path: '/login',
+    component: Login
   },
 
   {

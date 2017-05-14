@@ -14,8 +14,8 @@
 
       <div class="top-bar-right">
         <ul class="menu">
-          <li>
-            <a href="#">Login</a>
+          <li v-if="!isAuthenticated">
+            <router-link to="/login">Login</router-link>
           </li>
         </ul>
       </div>
@@ -25,6 +25,13 @@
 
 <script>
   export default {
-    name: 'TopNav'
+    name: 'TopNav',
+
+    computed: {
+      isAuthenticated() {
+        return this.$store.state.user.authenticated;
+      }
+    }
+
   };
 </script>

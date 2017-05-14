@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
-    <top-nav></top-nav>
-    <main-menu></main-menu>
+    <top-nav v-if="!isLogin"></top-nav>
+    <main-menu v-if="!isLogin"></main-menu>
 
     <transition name="page-fade" mode="out-in">
       <router-view></router-view>
@@ -18,11 +18,19 @@
 
   export default {
     name: 'app',
+
     components: {
       TopNav,
       MainMenu,
       MainFooter
+    },
+
+    computed: {
+      isLogin() {
+        return this.$route.path === '/login';
+      }
     }
+
   };
 </script>
 
