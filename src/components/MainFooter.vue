@@ -1,64 +1,76 @@
 <template>
   <footer class="footer">
-    <div class="row">
-      <div class="small-12 medium-3 column">
-        <h4>Menu</h4>
-        <ul class="menu vertical">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
+    <div class="row medium-unstack">
+      <div class="medium-4 columns">
+        <h4 class="footer__name">Yeti Snowcone</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem accusantium architecto id quidem, itaque nesciunt quam ducimus atque.</p>
+        <ul class="footer__menu-social menu simple">
+          <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
         </ul>
       </div>
-      <div class="small-12 medium-3 column">
-        <h4>Menu</h4>
-        <ul class="menu vertical">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-        </ul>
+
+      <div class="medium-4 columns">
+        <h4 class="footer__title">Contact Info</h4>
+        <div class="footer__block">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <p>100 W Rincon<br>San Francisco, CA 94015</p>
+        </div>
+        <div class="footer__block">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <p>1 (800) 555-5555</p>
+        </div>
+        <div class="footer__block">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <p>yetirules@fakeemail.com</p>
+        </div>
       </div>
-      <div class="small-12 medium-3 column">
-        <h4>Menu</h4>
-        <ul class="menu vertical">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-        </ul>
+
+      <div class="medium-4 columns">
+        <h4 class="footer__title">Instagram</h4>
+        <div class="row small-up-3">
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+          <div class="column column-block">
+            <img src="http://placehold.it/75" alt="" />
+          </div>
+        </div>
       </div>
-      <div class="small-12 medium-3 column">
-        <h4>Menu</h4>
-        <ul class="menu vertical">
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-          <li>
-            <a href="#">Link</a>
-          </li>
-        </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="row large-unstack align-middle">
+        <div class="column">
+          <p>&copy; 2017 No rights reserved</p>
+        </div>
+        <div class="column">
+          <ul class="menu footer__bottom-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
+
 </template>
 
 <script>

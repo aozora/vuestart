@@ -3,10 +3,14 @@
     <div class="row align-center">
       <div class="small-8 column">
         <form class="search__form" v-on:submit.prevent="submit">
-          <input type="text" id="search__form-input" name="search" v-model="query"/>
-          <button class="button" type="submit">
-            <span>Search</span>
-          </button>
+          <div class="input-group input-group-rounded">
+            <input class="input-group-field" type="search" id="search__form-input" name="search" v-model="query">
+            <div class="input-group-button">
+              <button class="button secondary" type="submit">
+                <span>Search</span>
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </div>
