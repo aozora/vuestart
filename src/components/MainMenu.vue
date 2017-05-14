@@ -1,26 +1,26 @@
 <template>
-  <nav id="main-menu" class="nav">
-    <div class="nav-left">
-      <router-link to="/" class="nav-item">
-        <img src="~assets/img/logo.png" alt="logo"/>
-        VueJs Prototype
-      </router-link>
-    </div>
+  <nav id="main-menu" class="main-menu">
+    <div class="column row">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+            <li class="menu-text">
+              <router-link to="/">
+                <img src="~assets/img/logo.png" alt="logo"/>
+                VueJs Prototype
+              </router-link>
+            </li>
+          </ul>
+        </div>
 
-    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-    <span class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-
-    <!-- This "nav-menu" is hidden on mobile -->
-    <!-- Add the modifier "is-active" to display it on mobile -->
-    <div class="nav-right nav-menu">
-      <router-link tag="a" to="/about" class="nav-item">
-        About
-      </router-link>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <router-link tag="li" to="/about">
+              <a>About</a>
+            </router-link>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 </template>

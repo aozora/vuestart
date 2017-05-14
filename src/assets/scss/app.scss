@@ -1,49 +1,47 @@
 @charset 'utf-8';
+@import 'settings';
+@import '~foundation-sites/scss/foundation';
 
-@import './variables';
+$global-flexbox: true !global;
 
-@import '~bulma';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+//@include foundation-accordion;
+//@include foundation-accordion-menu;
+//@include foundation-badge;
+//@include foundation-breadcrumbs;
+//@include foundation-button-group;
+//@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+//@include foundation-drilldown-menu;
+@include foundation-dropdown;
+//@include foundation-dropdown-menu;
+//@include foundation-flex-video;
+@include foundation-label;
+//@include foundation-media-object;
+//@include foundation-off-canvas;
+//@include foundation-orbit;
+//@include foundation-pagination;
+//@include foundation-progress-bar;
+//@include foundation-slider;
+//@include foundation-sticky;
+@include foundation-reveal;
+//@include foundation-switch;
+//@include foundation-table;
+//@include foundation-tabs;
+//@include foundation-thumbnail;
+@include foundation-title-bar;
+//@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
 
-//@import '~vue-blu/src/scss/blu';
-
-@import '~vue-blu/src/scss/elements/button';
-@import '~vue-blu/src/scss/elements/form';
-@import '~vue-blu/src/scss/elements/affix';
-@import '~vue-blu/src/scss/elements/alert';
-@import '~vue-blu/src/scss/elements/aside';
-@import '~vue-blu/src/scss/elements/breadcrumb';
-@import '~vue-blu/src/scss/elements/checkbox';
-@import '~vue-blu/src/scss/elements/collapse';
-@import '~vue-blu/src/scss/elements/datatable';
-@import '~vue-blu/src/scss/elements/datepicker';
-@import '~vue-blu/src/scss/elements/dropdown';
-@import '~vue-blu/src/scss/elements/inputnumber';
-@import '~vue-blu/src/scss/elements/menu';
-@import '~vue-blu/src/scss/elements/modal';
-@import '~vue-blu/src/scss/elements/notify';
-@import '~vue-blu/src/scss/elements/pagination';
-@import '~vue-blu/src/scss/elements/popconfirm';
-@import '~vue-blu/src/scss/elements/popover';
-@import '~vue-blu/src/scss/elements/progressbar';
-@import '~vue-blu/src/scss/elements/radio';
-@import '~vue-blu/src/scss/elements/scrollto';
-@import '~vue-blu/src/scss/elements/step';
-@import '~vue-blu/src/scss/elements/switch';
-@import '~vue-blu/src/scss/elements/tab';
-@import '~vue-blu/src/scss/elements/tag';
-@import '~vue-blu/src/scss/elements/timeline';
-@import '~vue-blu/src/scss/elements/tooltip';
-@import '~vue-blu/src/scss/elements/select';
-
-$fa-font-path: '~font-awesome/fonts/';
-@import '~font-awesome/scss/font-awesome';
-
-@import '~vue-blu/src/scss/animate';
-
-html{
-  overflow-x: visible;
-  overflow-y: visible;
-}
+@include foundation-flex-classes;
 
 
 // Application Components
@@ -58,6 +56,3 @@ html{
 @import 'components/features';
 @import 'components/footer';
 @import 'components/search';
-
-
-
