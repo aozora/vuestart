@@ -32,7 +32,6 @@
       submit(event) {
         event.preventDefault();
         const query = document.getElementById('search__form-input').value;
-//        console.log(`query = ${query}`);
 
         if (!query || query === '') {
           return false;

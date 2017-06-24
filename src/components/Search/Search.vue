@@ -56,7 +56,6 @@
 
     created() {
       // dispatch an action with a payload
-//      console.log(`Search.created(): this.$route.query.q = ${this.$route.query.q}`);
       this.fetchResults();
     }
   };
