@@ -5,7 +5,6 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueResourceMock from 'vue-resource-mock';
 import Vuelidate from 'vuelidate';
-import 'promise-polyfill';
 import 'whatwg-fetch';
 import App from './App';
 import router from './router';
