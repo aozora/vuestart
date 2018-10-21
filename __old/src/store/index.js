@@ -1,14 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
-import json from '../../__/src/assets/mock-data/products';
+
+// import {fetchResults} from './api'
+import json from '../assets/mock-data/products.json';
 
 Vue.use(Vuex);
 
 const delay = 2500;
 
-
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     isLoading: false,
     user: {
@@ -86,18 +87,16 @@ export default new Vuex.Store({
      */
     USER_LOGIN: ({ commit, state }, credentials) => {
       // http call for login
-      Vue.http.post('/api/Login', credentials)
-        .then((response) => {
-          commit('SET_IS_AUTHENTICATED', true);
-          commit('SET_USER_PROFILE', response.body);
+      Vue.http.post('/api/Login', credentials).then((response) => {
+        commit('SET_IS_AUTHENTICATED', true);
+        commit('SET_USER_PROFILE', response.body);
 
-          return Promise.resolve([]);
-        })
-        .catch((error) => {
-          /* eslint-disable no-console */
-          console.log(error);
-          return Promise.reject(error);
-        });
+        return Promise.resolve([]);
+      }).catch((error) => {
+        /* eslint-disable no-console */
+        console.log(error);
+        return Promise.reject(error);
+      });
     },
 
 
@@ -115,3 +114,5 @@ export default new Vuex.Store({
 
   }
 });
+
+export default store;
